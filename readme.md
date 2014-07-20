@@ -2,7 +2,7 @@ docker-golang-run-raspi
 ===================
 
 Go language container (golang) that can run "go service scripts" in a Raspberry Pi computer.
-Note: it is based on resin/rpi-raspbian
+Note: it is based on resin/rpi-raspbian (the /etc/service file is missing and golang network tests would fail if a service file woudln't been added. This Dockerfile adds /etc/services from Raspbian)
 
 Softare versions:
 
