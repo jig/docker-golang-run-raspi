@@ -1,7 +1,8 @@
-docker-golang-devel
+docker-golang-run-raspi
 ===================
 
-Go language container (golang) that can run "go service scripts".
+Go language container (golang) that can run "go service scripts" in a Raspberry Pi computer.
+Note: it is based on resin/rpi-raspbian
 
 Softare versions:
 
@@ -12,19 +13,19 @@ Run
 
 Change `/<user-home-dir>/go` with the absolute path of your src parent directory. 
 
-	$ docker run -v="/<user-home-dir>/go:/go:rw" jordi/golang:run
+	$ docker run -v="/<user-home-dir>/go:/go:rw" jordi/golang-raspi
 
 If you edit and save your source files, they will remain on your host after the container has been stopped or killed.
 
 Pull
 ----
 
-	$ docker pull jordi/golang:run
+	$ docker pull jordi/golang-raspi
 
 Build
 -----
 
 `git clone` this project, cd into it, and:
 
-	$ docker build -t golang:run .
+	$ docker build -t golang-raspi .
 
